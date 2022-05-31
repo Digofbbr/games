@@ -13,7 +13,7 @@ const getCurrentMonth = () => {
 }
 
 const getCurrentDay = () => {
-    const day = new Date().getDate() + 1
+    const day = new Date().getDate()
     if (day < 10){
         return `0${day}`
     } else{
@@ -32,7 +32,7 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`
 
 
 // Popular games
-const popular_games = `games?key=${api_key}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`
+const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10&key=${api_key}`
 
 // Upcoming games
 const upcoming_games = `games?key=${api_key}&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`

@@ -3,7 +3,7 @@ import {popularGamesURL, upcomingGamesURL , newGamesURL, searchGameURL} from '..
 
 
 export const loadGames = () => async (dispatch) => {
-    // fetch axios
+    
     const popularData = await axios.get(popularGamesURL());
     const upcomingData = await axios.get(upcomingGamesURL());
     const newGamesData = await axios.get(newGamesURL());
