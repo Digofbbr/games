@@ -32,8 +32,8 @@ const Game = ({ name, released, id, image }) => {
 		>
 			<Link to={`/game/${id}`}>
 				<motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
-				{console.log(released)}
 				<p>{released}</p>
+				<p>{released.toLocaleDateString("pt-BR")}</p>
 				<motion.img
 					layoutId={`image ${stringPathId}`}
 					src={smallImage(image, 640)}
